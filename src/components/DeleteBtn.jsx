@@ -5,7 +5,7 @@ const DeleteBtn = ({setTask, currentTask}) => {
             setTask((curTasks) => {
                 return curTasks.filter((item) => item.task !== currentTask)
             })
-        }} className="list-btn delete-btn">✕</button>
+        }} className="list-btn delete-btn">🗑️</button>
     )
 }
 

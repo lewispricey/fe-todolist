@@ -17,20 +17,28 @@ const TaskList = () => {
     const TaskItem = ({item, index}) => {
         return (
             <>
-                <li key={item.task}>
-                    {item.done ? <p className="done">{item.task}</p> : <p>{item.task}</p>}
-                    <button onClick={() => toggleDone(index)} className="list-btn done-btn">✓</button>
-                    <DeleteBtn setTask={setTasks} currentTask={item.task}/>
+                <li key={item.task} className='row'>
+                    <div className='list-col-btns'>
+                        <button onClick={() => toggleDone(index)} className="list-btn done-btn">✓</button>
+                    </div>
+                    <div className='list-col-txt'>
+                        {item.done ? <p className="done">{item.task}</p> : <p>{item.task}</p>}
+                    </div>
+                        <DeleteBtn setTask={setTasks} currentTask={item.task}/>
                 </li>
             </>
         )
     }
     
     return(
-        <>
-        <Adder />
-        <ul>{tasks.map((task, index) => <TaskItem item={task} index={index}/>)}</ul>
-        </>
+        <div className='row row-bottom'>
+            <div className='column left form'>
+                <Adder />
+            </div>
+            <div className='column'>
+                <ul>{tasks.map((task, index) => <TaskItem item={task} index={index}/>)}</ul>
+            </div>
+        </div>
     )
 }
 

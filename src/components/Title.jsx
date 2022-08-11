@@ -1,5 +1,9 @@
 const Title = () => {
-    return <h1>Welcome Back, Lewis</h1>
+    return (
+        <div className="column left">
+            <h1>Welcome Back, Lewis</h1>
+        </div>
+    )
 }
 
 export default Title

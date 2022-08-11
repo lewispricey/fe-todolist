@@ -1,7 +1,60 @@
 .App {
     text-align: center;
-  ;
-  background-color: aqua;
+    height: 100vh;
+    background-color: #4c6ef5
+}
+
+h1 {
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 4rem;
+  padding: 15%;
+}
+
+h2 {
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 4rem;
+  padding: 15%;
+}
+
+ul {
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 2rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  
+}
+
+p {
+  text-align: left;
+}
+
+.row{
+  display: flex;
+}
+
+.row-top {
+  height: 35%;
+}
+.row-bottom {
+  height: 65%;
+}
+
+.column {
+  flex: 50%;
+}
+
+.list-col-txt {
+  flex: 70%;
+}
+
+.list-col-btns {
+  flex: 30;
+}
+
+.left {
+  background-color: white;
 }
 
 .done {
@@ -9,12 +62,12 @@
 }
 
 .list-btn {
-  font-size: 1rem;
-  padding: 0.5rem 0.7rem;
-  border-radius: 1rem;
+  font-size: 1.3rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 50%;
   border-style: solid;
-  border-color: grey;
-  margin: 0rem 0.2rem;
+  border-color: black;
+  margin-bottom: 6%;
 }
 
 .done-btn {
@@ -23,4 +76,24 @@
 
 .delete-btn {
   color: red;
+}
+
+.add-btn {
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  padding: 4px 16px;
+  font-size: 1rem;
+  color: white;
+  background-color: #4c6ef5;
+
+}
+
+.txt-box {
+  font-size: 1.2rem;
+  padding: 2px;
+  margin-right: 1rem;
+  border-radius: 15px;
+  border: solid rgb(24, 24, 24) 2px
 }

@@ -4,8 +4,8 @@ const Adder = () => {
         <form action="">
         <label htmlFor="task-box">Use the box below to add your new task:</label>
         <br></br>
-        <input id="task-box" type="text" />
-        <button>Add</button>
+        <input className="txt-box" id="task-box" type="text" />
+        <button className="add-btn">Add</button>
         </form>
         </>
     )
