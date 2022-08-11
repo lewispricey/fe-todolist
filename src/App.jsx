@@ -1,10 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import Title from './components/Title';
+import ToDoHeading from './components/Todo-heading';
+import TaskList from './components/Tasklist';
 
 function App() {
   return (
     <div className="App">
-      <h1>Welcome Back, Lewis</h1>
+      <Title />
+      <ToDoHeading />
+      <TaskList />
     </div>
   );
 }
