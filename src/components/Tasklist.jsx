@@ -20,11 +20,11 @@ const TaskList = () => {
                 <li key={item.task} className='row'>
                     <div className='list-col-btns'>
                         <button onClick={() => toggleDone(index)} className="list-btn done-btn">✓</button>
+                        <DeleteBtn setTask={setTasks} currentTask={item.task}/>
                     </div>
                     <div className='list-col-txt'>
                         {item.done ? <p className="done">{item.task}</p> : <p>{item.task}</p>}
                     </div>
-                        <DeleteBtn setTask={setTasks} currentTask={item.task}/>
                 </li>
             </>
         )
