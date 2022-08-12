@@ -5,11 +5,9 @@ import TaskList from './components/Tasklist';
 
 function App() {
   return (
-    <div className="App">
-      <div className='row row-top'>
+    <div className="App grid-container">
       <Title />
       <ToDoHeading />
-      </div>
       <TaskList/>
     </div>
   );

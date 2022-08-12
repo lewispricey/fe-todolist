@@ -1,19 +1,56 @@
 .App {
+    min-height: 100vh;
     text-align: center;
-    height: 100vh;
-    background-color: #4c6ef5
+    background-color: #4c6ef5;
+    font-family: 'Nanum Pen Script', cursive;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 20% 20%;
+  grid-template-areas: 
+    'top-left top-right'
+    'bottom-left bottom-right';
+}
+
+.top-left {
+  grid-area: top-left;
+  position: relative;
+  background-color: white;
+}
+
+.top-right {
+  grid-area: top-right;
+}
+
+.btm-left{
+  grid-area: bottom-left;
+  background-color: white;
+}
+
+.btm-right{
+  grid-area: bottom-right;
+}
+
+
+.task-container {
+  padding-left: 10%;
+  display: flex;
+  flex-direction: row;
 }
 
 h1 {
+  text-align: center;
+  padding-top: 15%;
   font-family: 'Nanum Pen Script', cursive;
   font-size: 2.5rem;
-  padding: 15%;
 }
 
 h2 {
   font-family: 'Nanum Pen Script', cursive;
   font-size: 2.5rem;
-  padding: 15%;
+  padding-top: 15%;
 }
 
 ul {
@@ -21,42 +58,16 @@ ul {
   font-size: 1.6rem;
   list-style-type: none;
   margin: 0;
-  padding: 0;
-
-  
+  padding: 0;  
 }
 
 p {
   text-align: left;
+  padding-left: 3%;
 }
 
-.row{
-  display: flex;
-}
-
-.row-top {
-  height: 50%;
-}
-.row-bottom {
-  height: 50%;
-}
-
-.column {
-  flex: 50%;
-}
-
-.list-col-txt {
-  flex: 80%;
-}
-
-.list-col-btns {
-  flex: 20%;
-  text-align: right;
-  padding-right: 1rem;
-}
-
-.left {
-  background-color: white;
+.bottom-right {
+  grid-area: 2, 2;
 }
 
 .done {
@@ -68,17 +79,49 @@ p {
   padding: 0.1rem 0.4rem;
   border-radius: 50%;
   border-style: solid;
-  border-color: black;
+  border-color: white;
   margin-bottom: 6%;
 }
 
-.done-btn {
-  color: green;
+.done-btn--active {
+  color: white;
+  background-color: rgb(15, 196, 15);
+}
+
+.done-btn--active:hover{
+  background-color: rgb(159, 159, 159);
+}
+
+.done-btn--inactive {
+  color: rgb(15, 196, 15);
+}
+
+.done-btn--inactive:hover {
+  
+  background-color: rgb(159, 159, 159);
 }
 
 .delete-btn {
-  color: red;
   margin-left: 0.3rem;
+}
+
+.clear-btn-container {
+  text-align: right;
+}
+
+.clear-btn {
+  margin: 20px 20px ;
+  padding: 5px 20px;
+  border-radius: 15px;
+  border-style: solid;
+  background-color: #4c6ef5;
+  color: white
+}
+
+.clear-btn:hover{
+  color: #4c6ef5;
+  background-color: white;
+  
 }
 
 .add-btn {
@@ -91,6 +134,10 @@ p {
   color: white;
   background-color: #4c6ef5;
 
+}
+
+.add-btn:hover{
+  background-color: blue;
 }
 
 .txt-box {

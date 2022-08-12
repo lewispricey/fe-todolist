@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import Adder from "./Adder";
+import ClearBtn from './ClearBtn';
 import DeleteBtn from './DeleteBtn';
 // import TaskItem from './TaskItem';
 
@@ -16,29 +17,26 @@ const TaskList = () => {
 
     const TaskItem = ({item, index}) => {
         return (
-            <>
-                <li key={item.task} className='row'>
-                    <div className='list-col-btns'>
-                        <button onClick={() => toggleDone(index)} className="list-btn done-btn">✓</button>
+            <section className='btm-right'>
+                    <li key={item.task} className='task-container'>     
+                        {item.done? 
+                        <button onClick={() => toggleDone(index)} className="list-btn done-btn--active">✓</button> 
+                        :
+                        <button onClick={() => toggleDone(index)} className="list-btn done-btn--inactive">✓</button>
+                        }           
                         <DeleteBtn setTask={setTasks} currentTask={item.task}/>
-                    </div>
-                    <div className='list-col-txt'>
                         {item.done ? <p className="done">{item.task}</p> : <p>{item.task}</p>}
-                    </div>
-                </li>
-            </>
+                    </li>
+            </section>
         )
     }
     
     return(
-        <div className='row row-bottom'>
-            <div className='column left form'>
-                <Adder setTasks={setTasks}/>
-            </div>
-            <div className='column'>
-                <ul>{tasks.map((task, index) => <TaskItem item={task} index={index}/>)}</ul>
-            </div>
-        </div>
+        <>
+            <Adder setTasks={setTasks}/>
+            <ul>{tasks.map((task, index) => <TaskItem item={task} index={index}/>)}</ul>
+            <ClearBtn setTasks={setTasks}/>
+        </>
     )
 }
 

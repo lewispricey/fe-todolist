@@ -15,7 +15,7 @@ const Adder = ({setTasks}) => {
     }
 
     return (
-        <form onSubmit={handleClick}>
+        <form onSubmit={handleClick} className='btm-left'>
         <label htmlFor="task-box">Use the box below to add your new task:</label>
         <br></br>
         <input className="txt-box" id="task-box" type="text" onChange={handleChange} value={newTask}/>
