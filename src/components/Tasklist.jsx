@@ -33,7 +33,7 @@ const TaskList = () => {
     return(
         <div className='row row-bottom'>
             <div className='column left form'>
-                <Adder />
+                <Adder setTasks={setTasks}/>
             </div>
             <div className='column'>
                 <ul>{tasks.map((task, index) => <TaskItem item={task} index={index}/>)}</ul>

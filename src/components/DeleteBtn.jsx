@@ -1,5 +1,4 @@
 const DeleteBtn = ({setTask, currentTask}) => {
-    
         return (
         <button onClick={() => {
             setTask((curTasks) => {
